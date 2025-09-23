@@ -1,0 +1,1 @@
+﻿node_modules/\n.env\ndist/\nbuild/\n.prisma/\n*.sqlite\n*.db\n.dart_tool/\n.flutter-plugins*\n**/.DS_Store
