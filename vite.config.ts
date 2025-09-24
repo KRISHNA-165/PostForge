@@ -10,6 +10,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
+    assetsDir: 'assets',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -19,6 +20,9 @@ export default defineConfig({
           ui: ['lucide-react', 'react-hot-toast'],
           editor: ['react-quill', 'quill'],
         },
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
       },
     },
     chunkSizeWarningLimit: 1000,
@@ -26,4 +30,5 @@ export default defineConfig({
   define: {
     'process.env': {},
   },
+  base: './',
 });
